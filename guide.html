@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Actually Compare Diaper and Formula Prices — BabyPrices Guide</title>
+<meta name="description" content="Why sticker price is misleading for diapers and formula, how to calculate real unit price yourself, and what to watch for as your baby grows.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EEF2F0; --card:#FFFFFF; --ink:#16211D; --ink-soft:#4B5B54; --ink-faint:#7C8A83;
+    --ledger:#0B6E5C; --ledger-dark:#08503F; --ledger-wash:#E4EFEC; --stamp:#E2A33D; --stamp-wash:#FBF0DC; --hairline:#D6DDD8;
+    --font-display:'Space Grotesk', sans-serif; --font-body:'IBM Plex Sans', sans-serif; --font-mono:'IBM Plex Mono', monospace;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:var(--font-body); line-height:1.65; -webkit-font-smoothing:antialiased;}
+  a{color:var(--ledger-dark); font-weight:600;}
+  .wrap{max-width:760px; margin:0 auto; padding:0 20px;}
+  header{border-bottom:1px solid var(--hairline); padding:18px 0;}
+  .logo{display:flex; align-items:center; gap:9px; text-decoration:none;}
+  .logo-word{font-family:var(--font-display); font-weight:700; font-size:21px;}
+  .logo-word .b1{color:var(--ink-soft); font-weight:500;} .logo-word .b2{color:var(--ink);}
+  .back-link{font-size:13px; color:var(--ink-soft); text-decoration:none; margin-top:4px; display:inline-block;}
+  main{padding:32px 0 20px;}
+  h1{font-family:var(--font-display); font-size:28px; margin:0 0 10px; line-height:1.2;}
+  .dek{font-size:15px; color:var(--ink-soft); margin-bottom:28px;}
+  h2{font-family:var(--font-display); font-size:18px; margin:32px 0 10px; color:var(--ink);}
+  p, li{font-size:14.5px; color:var(--ink-soft);}
+  .example{background:var(--card); border:1px solid var(--hairline); border-radius:10px; padding:16px 18px; margin:14px 0;}
+  .example .formula{font-family:var(--font-mono); font-size:13.5px; color:var(--ledger-dark); font-weight:600;}
+  .best-tag{font-size:10.5px; font-weight:700; text-transform:uppercase; color:var(--ledger-dark); background:var(--stamp-wash); border:1px solid var(--stamp); padding:1px 6px; border-radius:4px;}
+  footer{border-top:1px solid var(--hairline); padding:20px 0 50px; font-size:12.5px; color:var(--ink-faint);}
+  footer a{color:var(--ledger-dark);}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
+    <a href="index.html" class="logo">
+      <svg width="26" height="26" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M6 7 H19 L27 16 L19 25 H6 Z" fill="#0B6E5C"/>
+        <circle cx="12.5" cy="16" r="2.6" fill="#EEF2F0"/>
+      </svg>
+      <div class="logo-word"><span class="b1">Baby</span><span class="b2">Prices</span></div>
+    </a>
+    <a class="back-link" href="index.html">← Back to price comparisons</a>
+  </div>
+</header>
+
+<div class="wrap">
+  <main>
+    <h1>Why the Sticker Price on Diapers and Formula Is Almost Always Misleading</h1>
+    <p class="dek">The biggest pack isn't always the cheapest one, and the "sale" tag isn't either. Here's how we calculate real unit price, and how to sanity-check it yourself in about ten seconds.</p>
+
+    <h2>The trap: comparing totals instead of units</h2>
+    <p>Two diaper packs sitting next to each other on Amazon can look like a straightforward choice — $34.99 versus $44.94 — until you notice one box has 216 diapers and the other has 144. The "expensive" box is actually the better deal per diaper. Retailers aren't hiding this on purpose; it's just that pack sizes vary enough between brands that your brain can't do the division while scrolling. That's the entire reason this site exists.</p>
+
+    <div class="example">
+      <div class="example formula">Luvs, 216 ct, $34.99 → $34.99 ÷ 216 = $0.162 per diaper <span class="best-tag">cheaper</span></div>
+      <div class="example formula" style="margin-top:6px;">Pampers, 144 ct, $44.94 → $44.94 ÷ 144 = $0.312 per diaper</div>
+    </div>
+
+    <p>Same size, same general purpose, nearly 2× difference once you divide it out. Neither price is wrong or deceptive — you just have to do the division to see it, which is the one step most people skip while shopping on a phone.</p>
+
+    <h2>Formula is trickier: powder weight isn't feeding volume</h2>
+    <p>Diapers are simple — count divided by price. Formula has a hidden step: the ounces printed on a tub are ounces of <em>powder</em>, not ounces of prepared bottle. A tub of powder gets mixed with water and yields several times its own weight in ready-to-feed formula. That's why we calculate and compare formula by price-per-ounce-of-powder rather than price-per-fluid-ounce-consumed — it's the number that actually matches what's printed on the container and what you're paying for, and it stays comparable across brands even though mixing ratios shift slightly from one to the next.</p>
+
+    <h2>Three things worth watching as your baby grows</h2>
+    <ul>
+      <li><strong>Sizes change the math.</strong> A "Size 4" pack today might be a "Size 5" pack in two months, and larger sizes almost always cost more per diaper — fewer fit in a similarly sized box. Re-check unit price when you size up rather than assuming your favorite brand is still the cheapest option at the new size.</li>
+      <li><strong>Bigger isn't automatically cheaper.</strong> Bulk packs usually — not always — win on a per-unit basis. It's still worth checking, since occasionally a mid-size pack is on sale and briefly beats the jumbo box.</li>
+      <li><strong>Store brands are worth a real look.</strong> In our own samples, store-brand options (Amazon's own lines, wholesale-club brands) were consistently among the lowest per-unit prices in both categories, without a corresponding drop in size or count. Brand loyalty is a reasonable choice for fit or sensitivity reasons — just make it a deliberate one, not a default.</li>
+    </ul>
+
+    <h2>How to check the math yourself</h2>
+    <p>Whenever you're unsure, or comparing something we haven't listed yet: take the total price, divide by the count (diapers) or by the ounces printed on the label (formula), and you have the same number we show on every listing. No app required — just annoying to do while standing in the aisle or thumbing through a phone, which is the actual problem this site solves.</p>
+
+    <p><a href="index.html">← See the current comparison</a></p>
+  </main>
+
+  <footer>
+    <p>As an Amazon Associate, BabyPrices.us earns from qualifying purchases. See our <a href="privacy-policy.html">Privacy Policy</a>.</p>
+  </footer>
+</div>
+</body>
+</html>
