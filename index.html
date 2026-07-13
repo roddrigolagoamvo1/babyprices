@@ -188,7 +188,6 @@
 
   <div class="disclosure">
     <span>This site is supported by paid Amazon affiliate links.</span>
-    <span class="sample-flag">Sample data — preview only, not live Amazon prices</span>
   </div>
 
   <div class="controls">
@@ -236,7 +235,7 @@
 
   <footer>
     <p><strong>Methodology.</strong> Unit price = total listing price ÷ count (diapers) or ÷ ounces of powder (formula). Monthly estimate per item = unit price × your daily usage × 30 — formula usage is measured in ounces of powder, matching how the unit price itself is calculated, since a tub's powder makes several times its weight in prepared formula. Usage rates are editable; defaults are ballpark averages, not medical guidance. "Best value" marks the lowest verified unit price in its category. Check any listing to add it to the estimate below — check as many as you want to compare, uncheck to remove. Read more in our <a href="guide.html">unit price guide</a>.</p>
-    <p><strong>Disclosure.</strong> BabyPrices.us is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. As an Amazon Associate, this site earns from qualifying purchases. This doesn't affect the price you pay or how listings are ranked — ranking is unit price only, never sponsorship. Data shown is illustrative sample data for design preview, not a live feed.</p>
+    <p><strong>Disclosure.</strong> BabyPrices.us is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. As an Amazon Associate, this site earns from qualifying purchases. This doesn't affect the price you pay or how listings are ranked — ranking is unit price only, never sponsorship.</p>
     <p class="footer-links"><a href="privacy-policy.html">Privacy Policy</a> · <a href="guide.html">Unit Price Guide</a> · <a href="mailto:hello@babyprices.us">Contact</a></p>
   </footer>
 
@@ -253,11 +252,11 @@
     { id:4, category:'diapers', brand:'Huggies', name:'Little Movers, Size 4', size:'156 ct', count:156, totalPrice:42.99, unitLabel:'diaper', asin:'B0EXAMPLE4', link:'https://www.amazon.com/dp/B0EXAMPLE4?tag=YOURTAG-20' },
     { id:5, category:'diapers', brand:'Pampers', name:'Swaddlers, Size 4', size:'144 ct', count:144, totalPrice:44.94, unitLabel:'diaper', asin:'B0EXAMPLE5', link:'https://www.amazon.com/dp/B0EXAMPLE5?tag=YOURTAG-20' },
     { id:6, category:'diapers', brand:'The Honest Co.', name:'Clean Conscious Diapers, Size 4', size:'128 ct', count:128, totalPrice:41.99, unitLabel:'diaper', asin:'B0EXAMPLE6', link:'https://www.amazon.com/dp/B0EXAMPLE6?tag=YOURTAG-20' },
-    { id:7, category:'formula', brand:"Member's Mark", name:'Premium Infant Formula, Powder', size:'35 oz', count:35, totalPrice:29.99, unitLabel:'oz', asin:'B0EXAMPLE7', link:'https://www.amazon.com/dp/B0EXAMPLE7?tag=YOURTAG-20' },
-    { id:8, category:'formula', brand:'Kirkland Signature', name:'ProCare Non-GMO Infant Formula', size:'35 oz', count:35, totalPrice:31.99, unitLabel:'oz', asin:'B0EXAMPLE8', link:'https://www.amazon.com/dp/B0EXAMPLE8?tag=YOURTAG-20' },
+    { id:7, category:'formula', brand:'Kabrita', name:'Goat Milk-Based Infant Formula Powder, 0-12 Months', size:'28 oz', count:28, totalPrice:45.99, unitLabel:'oz', affiliateLink:'https://amzn.to/4eZDLHh' },    
+    { id:8, category:'formula', brand:'Kabrita', name:'Goat Milk-Based Toddler Nutrition Drink, 12-24 Months', size:'28 oz', count:28, totalPrice:42.99, unitLabel:'oz',  affiliateLink:'https://amzn.to/4wFnTQ2' },    
     { id:9, category:'formula', brand:'Bobbie', name:'Organic Infant Formula', size:'21.2 oz', count:21.2, totalPrice:32.99, unitLabel:'oz', asin:'B0EXAMPLE9', link:'https://www.amazon.com/dp/B0EXAMPLE9?tag=YOURTAG-20' },
     { id:10, category:'formula', brand:'Gerber', name:'Good Start GentlePro Powder', size:'32.2 oz', count:32.2, totalPrice:38.49, unitLabel:'oz', asin:'B0EXAMPL10', link:'https://www.amazon.com/dp/B0EXAMPL10?tag=YOURTAG-20' },
-    { id:11, category:'formula', brand:'Similac', name:'360 Total Care Infant Formula', size:'30.8 oz', count:30.8, totalPrice:49.99, unitLabel:'oz', asin:'B0EXAMPL11', link:'https://www.amazon.com/dp/B0EXAMPL11?tag=YOURTAG-20' },
+    { id:11, category:'formula', brand:'Similac', name:'360 Total Care Infant Formula, Pack of 3', size:'3 x 36 oz (108 oz total)', count:108, totalPrice:170.84, unitLabel:'oz', affiliateLink:'https://amzn.to/450hkvA' },   
     { id:12, category:'formula', brand:'Enfamil', name:'NeuroPro Infant Formula', size:'20.7 oz', count:20.7, totalPrice:34.99, unitLabel:'oz', asin:'B0EXAMPL12', link:'https://www.amazon.com/dp/B0EXAMPL12?tag=YOURTAG-20' },
   ];
   PRODUCTS.forEach(p => p.unitPrice = p.totalPrice / p.count);
