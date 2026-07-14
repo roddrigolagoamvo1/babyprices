@@ -1,0 +1,43 @@
+# BabyPrices.us — robots.txt
+# Goal: maximum visibility in both classic search and AI-generated answers.
+# Nothing on this site is private, so everything is allowed by default —
+# named blocks below are for clarity/robustness, not restriction.
+# Review quarterly: AI crawler names change faster than this file will.
+# Last updated: 2026-07-13
+
+User-agent: *
+Allow: /
+
+# --- Standard search engines ---
+User-agent: Googlebot
+Allow: /
+User-agent: Bingbot
+Allow: /
+
+# --- OpenAI (ChatGPT) ---
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+
+# --- Anthropic (Claude) ---
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-User
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+
+# --- Perplexity ---
+User-agent: PerplexityBot
+Allow: /
+User-agent: Perplexity-User
+Allow: /
+
+# --- Google AI training opt-in (does not affect Googlebot/Search/AI Overviews) ---
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://babyprices.us/sitemap.xml

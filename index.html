@@ -3,11 +3,83 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BabyPrices — Budget Builder</title>
-<meta name="description" content="Every diaper and infant formula listing on Amazon, sorted by true unit price — plus your real monthly cost.">
+<title>BabyPrices — Real Cost Per Diaper &amp; Per Ounce of Formula on Amazon</title>
+<meta name="description" content="Every diaper and infant formula listing on Amazon, sorted by true unit price — plus a calculator for your real monthly cost. Updated by hand from real Amazon listings.">
+<link rel="canonical" href="https://babyprices.us/">
+<meta name="robots" content="index, follow">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BabyPrices">
+<meta property="og:title" content="BabyPrices — Real Cost Per Diaper & Per Ounce of Formula on Amazon">
+<meta property="og:description" content="Every diaper and infant formula listing on Amazon, sorted by true unit price — plus a calculator for your real monthly cost.">
+<meta property="og:url" content="https://babyprices.us/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="BabyPrices — Real Cost Per Diaper & Per Ounce of Formula">
+<meta name="twitter:description" content="Every diaper and infant formula listing on Amazon, sorted by true unit price.">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://babyprices.us/#organization",
+      "name": "BabyPrices",
+      "url": "https://babyprices.us/",
+      "description": "Unit price comparison for diapers and infant formula sold on Amazon.com."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://babyprices.us/#website",
+      "name": "BabyPrices",
+      "url": "https://babyprices.us/",
+      "publisher": { "@id": "https://babyprices.us/#organization" }
+    },
+    {
+      "@type": "ItemList",
+      "name": "Diaper and Infant Formula Unit Price Comparison",
+      "description": "Amazon diaper and infant formula listings ranked by real unit price (price per diaper or price per ounce of powder).",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "item": {
+          "@type": "Product", "name": "Huggies Little Movers, Size 4 (22-37 lbs), 150 ct",
+          "brand": { "@type": "Brand", "name": "Huggies" },
+          "offers": { "@type": "Offer", "price": "54.99", "priceCurrency": "USD", "url": "https://amzn.to/4vXKAPG", "availability": "https://schema.org/InStock" }
+        }},
+        { "@type": "ListItem", "position": 2, "item": {
+          "@type": "Product", "name": "Pampers Cruisers 360, Size 4, 144 ct",
+          "brand": { "@type": "Brand", "name": "Pampers" },
+          "offers": { "@type": "Offer", "price": "49.77", "priceCurrency": "USD", "url": "https://amzn.to/4vU2Fhk", "availability": "https://schema.org/InStock" }
+        }},
+        { "@type": "ListItem", "position": 3, "item": {
+          "@type": "Product", "name": "Pampers Swaddlers, Size 4, 150 ct",
+          "brand": { "@type": "Brand", "name": "Pampers" },
+          "offers": { "@type": "Offer", "price": "49.77", "priceCurrency": "USD", "url": "https://amzn.to/4eUj8ML", "availability": "https://schema.org/InStock" }
+        }},
+        { "@type": "ListItem", "position": 4, "item": {
+          "@type": "Product", "name": "Similac 360 Total Care Infant Formula, Powder, Pack of 3 (108 oz total)",
+          "brand": { "@type": "Brand", "name": "Similac" },
+          "offers": { "@type": "Offer", "price": "170.84", "priceCurrency": "USD", "url": "https://amzn.to/450hkvA", "availability": "https://schema.org/InStock" }
+        }},
+        { "@type": "ListItem", "position": 5, "item": {
+          "@type": "Product", "name": "Kabrita Goat Milk-Based Infant Formula Powder, 0-12 Months, 28 oz",
+          "brand": { "@type": "Brand", "name": "Kabrita" },
+          "offers": { "@type": "Offer", "price": "45.99", "priceCurrency": "USD", "url": "https://amzn.to/4eZDLHh", "availability": "https://schema.org/InStock" }
+        }},
+        { "@type": "ListItem", "position": 6, "item": {
+          "@type": "Product", "name": "Kabrita Goat Milk-Based Toddler Nutrition Drink, 12-24 Months, 28 oz",
+          "brand": { "@type": "Brand", "name": "Kabrita" },
+          "offers": { "@type": "Offer", "price": "42.99", "priceCurrency": "USD", "url": "https://amzn.to/4wFnTQ2", "availability": "https://schema.org/InStock" }
+        }}
+      ]
+    }
+  ]
+}
+</script>
+
 <style>
   :root{
     --paper:#EEF2F0;
@@ -43,9 +115,10 @@
   .header-row{display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;}
   .logo{display:flex; align-items:center; gap:9px;}
   .logo-mark{flex-shrink:0;}
-  .logo-word{font-family:var(--font-display); font-weight:700; font-size:21px; letter-spacing:-0.01em;}
+  .logo-word{font-family:var(--font-display); font-weight:700; font-size:21px; letter-spacing:-0.01em; margin:0;}
   .logo-word .b1{color:var(--ink-soft); font-weight:500;}
   .logo-word .b2{color:var(--ink);}
+  .visually-hidden{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;}
   .tagline{font-size:13px; color:var(--ink-soft); margin-top:3px;}
   nav.cats{display:flex; gap:6px; background:var(--card); border:1px solid var(--hairline); border-radius:8px; padding:3px;}
   nav.cats button{border:none; background:transparent; padding:7px 14px; font-size:13px; font-weight:600; color:var(--ink-soft); border-radius:6px; cursor:pointer;}
@@ -155,7 +228,7 @@
         <circle cx="12.5" cy="16" r="2.6" fill="#EEF2F0"/>
       </svg>
       <div>
-        <div class="logo-word"><span class="b1">Baby</span><span class="b2">Prices</span></div>
+        <h1 class="logo-word"><span class="b1">Baby</span><span class="b2">Prices</span><span class="visually-hidden"> — Diaper &amp; Infant Formula Unit Price Comparison</span></h1>
         <div class="tagline">Real cost per diaper. Real cost per ounce. Real monthly total.</div>
       </div>
     </div>
@@ -242,22 +315,13 @@
 </div>
 
 <script>
-  // NOTE: asin/link below are placeholders. Replace YOURTAG-20 with your real
-  // Associates tag, and each asin with the real 10-character ASIN from the
-  // product's Amazon URL. Link format: https://www.amazon.com/dp/{ASIN}?tag={yourtag}
   const PRODUCTS = [
     { id:1, category:'diapers', brand:'Huggies', name:'Little Movers, Size 4 (22-37 lbs)', size:'150 ct', count:150, totalPrice:54.99, unitLabel:'diaper', affiliateLink:'https://amzn.to/4vXKAPG' },
     { id:2, category:'diapers', brand:'Pampers', name:'Cruisers 360, Size 4', size:'144 ct', count:144, totalPrice:49.77, unitLabel:'diaper', affiliateLink:'https://amzn.to/4vU2Fhk' },
     { id:3, category:'diapers', brand:'Pampers', name:'Swaddlers, Size 4', size:'150 ct', count:150, totalPrice:49.77, unitLabel:'diaper', affiliateLink:'https://amzn.to/4eUj8ML' },
-    { id:4, category:'diapers', brand:'Huggies', name:'Little Movers, Size 4', size:'156 ct', count:156, totalPrice:42.99, unitLabel:'diaper', asin:'B0EXAMPLE4', link:'https://www.amazon.com/dp/B0EXAMPLE4?tag=YOURTAG-20' },
-    { id:5, category:'diapers', brand:'Pampers', name:'Swaddlers, Size 4', size:'144 ct', count:144, totalPrice:44.94, unitLabel:'diaper', asin:'B0EXAMPLE5', link:'https://www.amazon.com/dp/B0EXAMPLE5?tag=YOURTAG-20' },
-    { id:6, category:'diapers', brand:'The Honest Co.', name:'Clean Conscious Diapers, Size 4', size:'128 ct', count:128, totalPrice:41.99, unitLabel:'diaper', asin:'B0EXAMPLE6', link:'https://www.amazon.com/dp/B0EXAMPLE6?tag=YOURTAG-20' },
-    { id:7, category:'formula', brand:'Kabrita', name:'Goat Milk-Based Infant Formula Powder, 0-12 Months', size:'28 oz', count:28, totalPrice:45.99, unitLabel:'oz', affiliateLink:'https://amzn.to/4eZDLHh' },    
-    { id:8, category:'formula', brand:'Kabrita', name:'Goat Milk-Based Toddler Nutrition Drink, 12-24 Months', size:'28 oz', count:28, totalPrice:42.99, unitLabel:'oz',  affiliateLink:'https://amzn.to/4wFnTQ2' },    
-    { id:9, category:'formula', brand:'Bobbie', name:'Organic Infant Formula', size:'21.2 oz', count:21.2, totalPrice:32.99, unitLabel:'oz', asin:'B0EXAMPLE9', link:'https://www.amazon.com/dp/B0EXAMPLE9?tag=YOURTAG-20' },
-    { id:10, category:'formula', brand:'Gerber', name:'Good Start GentlePro Powder', size:'32.2 oz', count:32.2, totalPrice:38.49, unitLabel:'oz', asin:'B0EXAMPL10', link:'https://www.amazon.com/dp/B0EXAMPL10?tag=YOURTAG-20' },
-    { id:11, category:'formula', brand:'Similac', name:'360 Total Care Infant Formula, Pack of 3', size:'3 x 36 oz (108 oz total)', count:108, totalPrice:170.84, unitLabel:'oz', affiliateLink:'https://amzn.to/450hkvA' },   
-    { id:12, category:'formula', brand:'Enfamil', name:'NeuroPro Infant Formula', size:'20.7 oz', count:20.7, totalPrice:34.99, unitLabel:'oz', asin:'B0EXAMPL12', link:'https://www.amazon.com/dp/B0EXAMPL12?tag=YOURTAG-20' },
+    { id:7, category:'formula', brand:'Kabrita', name:'Goat Milk-Based Infant Formula Powder, 0-12 Months', size:'28 oz', count:28, totalPrice:45.99, unitLabel:'oz', affiliateLink:'https://amzn.to/4eZDLHh' },
+    { id:8, category:'formula', brand:'Kabrita', name:'Goat Milk-Based Toddler Nutrition Drink, 12-24 Months', size:'28 oz', count:28, totalPrice:42.99, unitLabel:'oz', affiliateLink:'https://amzn.to/4wFnTQ2' },
+    { id:11, category:'formula', brand:'Similac', name:'360 Total Care Infant Formula, Pack of 3', size:'3 x 36 oz (108 oz total)', count:108, totalPrice:170.84, unitLabel:'oz', affiliateLink:'https://amzn.to/450hkvA' },
   ];
   PRODUCTS.forEach(p => p.unitPrice = p.totalPrice / p.count);
 
