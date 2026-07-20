@@ -279,7 +279,7 @@
     </select>
   </div>
 
-  <div class="list" id="list"></div>
+  <div class="list" id="list"><div style="padding:24px; font-size:13.5px; color:var(--ink-faint);">Loading listings…</div></div>
 
   <section class="budget-section">
     <h2>Your monthly estimate</h2>
@@ -321,21 +321,10 @@
 </div>
 
 <script>
-  const PRODUCTS = [
-    { id:1, category:'diapers', brand:'Huggies', name:'Little Movers, Size 4 (22-37 lbs)', size:'150 ct', count:150, totalPrice:54.99, unitLabel:'diaper', affiliateLink:'https://amzn.to/4vXKAPG' },
-    { id:2, category:'diapers', brand:'Pampers', name:'Cruisers 360, Size 4', size:'144 ct', count:144, totalPrice:49.77, unitLabel:'diaper', affiliateLink:'https://amzn.to/4vU2Fhk' },
-    { id:3, category:'diapers', brand:'Pampers', name:'Swaddlers, Size 4', size:'150 ct', count:150, totalPrice:49.77, unitLabel:'diaper', affiliateLink:'https://amzn.to/4eUj8ML' },
-    { id:4, category:'diapers', brand:'Mama Bear', name:'Gentle Touch Diapers, Size 4, Fragrance-Free', size:'148 ct', count:148, totalPrice:40.13, unitLabel:'diaper', affiliateLink:'https://amzn.to/3QTDJrm' },
-    { id:5, category:'diapers', brand:'Pampers', name:'Amore, Size 4 (15-34 lbs), Our Best Diaper', size:'108 ct', count:108, totalPrice:42.97, unitLabel:'diaper', affiliateLink:'https://amzn.to/4pvYAhe' },
-    { id:6, category:'diapers', brand:'Pampers', name:'Swaddlers, Size 4 (120 ct)', size:'120 ct', count:120, totalPrice:44.97, unitLabel:'diaper', affiliateLink:'https://amzn.to/4gZ8827' },
-    { id:7, category:'formula', brand:'Kabrita', name:'Goat Milk-Based Infant Formula Powder, 0-12 Months', size:'28 oz', count:28, totalPrice:45.99, unitLabel:'oz', affiliateLink:'https://amzn.to/4eZDLHh' },
-    { id:8, category:'formula', brand:'Kabrita', name:'Goat Milk-Based Toddler Nutrition Drink, 12-24 Months', size:'28 oz', count:28, totalPrice:42.99, unitLabel:'oz', affiliateLink:'https://amzn.to/4wFnTQ2' },
-    { id:9, category:'formula', brand:'Similac', name:'360 Total Care Infant Formula, Powder, 20.6 oz Tub', size:'20.6 oz', count:20.6, totalPrice:34.98, unitLabel:'oz', affiliateLink:'https://amzn.to/4wGw8vg' },
-    { id:10, category:'formula', brand:'Bubs', name:'Whole Goat Milk Formula with Iron, 0-12 Months', size:'20 oz', count:20, totalPrice:24.97, unitLabel:'oz', affiliateLink:'https://amzn.to/4yrg0j4' },
-    { id:11, category:'formula', brand:'Similac', name:'360 Total Care Infant Formula, Pack of 3', size:'3 x 36 oz (108 oz total)', count:108, totalPrice:170.84, unitLabel:'oz', affiliateLink:'https://amzn.to/450hkvA' },
-    { id:12, category:'formula', brand:'Similac', name:'Advance Infant Formula With Iron, 30.8-oz Value Can', size:'30.8 oz', count:30.8, totalPrice:42.97, unitLabel:'oz', affiliateLink:'https://amzn.to/4fGtu2U' },
-  ];
-  PRODUCTS.forEach(p => p.unitPrice = p.totalPrice / p.count);
+  let PRODUCTS = [];
+  let bestDiaper, bestFormula;
+  let selectedDiaperIds = new Set();
+  let selectedFormulaIds = new Set();
 
   const SWATCH_COLORS = ['#0B6E5C','#7C5CBF','#C2543A','#2E6FA7','#B0862E','#4B7A3E'];
   function swatchColor(brand){ let h=0; for(let i=0;i<brand.length;i++) h = brand.charCodeAt(i)+((h<<5)-h); return SWATCH_COLORS[Math.abs(h)%SWATCH_COLORS.length]; }
@@ -344,12 +333,9 @@
 
   function itemsIn(cat){ return PRODUCTS.filter(p => p.category === cat); }
   function bestIdByCategory(cat){ const items = itemsIn(cat); return items.reduce((b,p)=> p.unitPrice < b.unitPrice ? p : b, items[0]).id; }
-  const bestDiaper = bestIdByCategory('diapers'), bestFormula = bestIdByCategory('formula');
 
   let activeCat = 'all';
   let activeSort = 'unit-asc';
-  let selectedDiaperIds = new Set([bestDiaper]);
-  let selectedFormulaIds = new Set([bestFormula]);
 
   function updateThesis(){
     const d = itemsIn('diapers').map(p=>p.unitPrice), f = itemsIn('formula').map(p=>p.unitPrice);
@@ -479,9 +465,33 @@
     render(); updateBudget();
   });
 
-  updateThesis();
-  render();
-  updateBudget();
+  async function init(){
+    try {
+      const res = await fetch('data.json');
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      PRODUCTS = await res.json();
+    } catch (err) {
+      document.getElementById('list').innerHTML =
+        '<div style="padding:24px; font-size:13.5px; color:var(--ink-soft);">' +
+        'Couldn\'t load product data (' + err.message + '). ' +
+        'If you\'re testing this file locally by double-clicking it, browsers block local data.json fetches — ' +
+        'run <code style="font-family:var(--font-mono);">python3 -m http.server 8000</code> in this folder and open ' +
+        '<code style="font-family:var(--font-mono);">http://localhost:8000</code> instead. On the live Netlify site this loads normally.' +
+        '</div>';
+      return;
+    }
+    PRODUCTS.forEach(p => p.unitPrice = p.totalPrice / p.count);
+    bestDiaper = bestIdByCategory('diapers');
+    bestFormula = bestIdByCategory('formula');
+    selectedDiaperIds = new Set([bestDiaper]);
+    selectedFormulaIds = new Set([bestFormula]);
+
+    updateThesis();
+    render();
+    updateBudget();
+  }
+
+  init();
 </script>
 
 </body>
