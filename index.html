@@ -37,49 +37,556 @@
       "@id": "https://babyprices.us/#website",
       "name": "BabyPrices",
       "url": "https://babyprices.us/",
-      "publisher": { "@id": "https://babyprices.us/#organization" }
+      "publisher": {
+        "@id": "https://babyprices.us/#organization"
+      }
     },
     {
       "@type": "ItemList",
       "name": "Diaper and Infant Formula Unit Price Comparison",
       "description": "Amazon diaper and infant formula listings ranked by real unit price (price per diaper or price per ounce of powder).",
+      "numberOfItems": 27,
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "item": {
-          "@type": "Product", "name": "Huggies Little Movers, Size 4 (22-37 lbs), 150 ct",
-          "description": "Huggies Little Movers diapers, Size 4, 150 count pack. Works out to $0.367 per diaper.",
-          "brand": { "@type": "Brand", "name": "Huggies" },
-          "offers": { "@type": "Offer", "price": "54.99", "priceCurrency": "USD", "url": "https://amzn.to/4vXKAPG", "availability": "https://schema.org/InStock" }
-        }},
-        { "@type": "ListItem", "position": 2, "item": {
-          "@type": "Product", "name": "Pampers Cruisers 360, Size 4, 144 ct",
-          "description": "Pampers Cruisers 360 diapers, Size 4, 144 count pack. Works out to $0.346 per diaper.",
-          "brand": { "@type": "Brand", "name": "Pampers" },
-          "offers": { "@type": "Offer", "price": "49.77", "priceCurrency": "USD", "url": "https://amzn.to/4vU2Fhk", "availability": "https://schema.org/InStock" }
-        }},
-        { "@type": "ListItem", "position": 3, "item": {
-          "@type": "Product", "name": "Pampers Swaddlers, Size 4, 150 ct",
-          "description": "Pampers Swaddlers diapers, Size 4, 150 count pack. Works out to $0.332 per diaper.",
-          "brand": { "@type": "Brand", "name": "Pampers" },
-          "offers": { "@type": "Offer", "price": "49.77", "priceCurrency": "USD", "url": "https://amzn.to/4eUj8ML", "availability": "https://schema.org/InStock" }
-        }},
-        { "@type": "ListItem", "position": 4, "item": {
-          "@type": "Product", "name": "Similac 360 Total Care Infant Formula, Powder, Pack of 3 (108 oz total)",
-          "description": "Similac 360 Total Care infant formula powder, pack of 3 cans, 108 oz of powder total. Works out to $1.582 per ounce of powder.",
-          "brand": { "@type": "Brand", "name": "Similac" },
-          "offers": { "@type": "Offer", "price": "170.84", "priceCurrency": "USD", "url": "https://amzn.to/450hkvA", "availability": "https://schema.org/InStock" }
-        }},
-        { "@type": "ListItem", "position": 5, "item": {
-          "@type": "Product", "name": "Kabrita Goat Milk-Based Infant Formula Powder, 0-12 Months, 28 oz",
-          "description": "Kabrita goat milk-based infant formula powder for ages 0-12 months, 28 oz can. Works out to $1.643 per ounce of powder.",
-          "brand": { "@type": "Brand", "name": "Kabrita" },
-          "offers": { "@type": "Offer", "price": "45.99", "priceCurrency": "USD", "url": "https://amzn.to/4eZDLHh", "availability": "https://schema.org/InStock" }
-        }},
-        { "@type": "ListItem", "position": 6, "item": {
-          "@type": "Product", "name": "Kabrita Goat Milk-Based Toddler Nutrition Drink, 12-24 Months, 28 oz",
-          "description": "Kabrita goat milk-based toddler nutrition powder for ages 12-24 months, 28 oz can. Works out to $1.535 per ounce of powder.",
-          "brand": { "@type": "Brand", "name": "Kabrita" },
-          "offers": { "@type": "Offer", "price": "42.99", "priceCurrency": "USD", "url": "https://amzn.to/4wFnTQ2", "availability": "https://schema.org/InStock" }
-        }}
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Product",
+            "name": "Huggies Little Movers, Size 4 (22-37 lbs)",
+            "description": "Huggies Little Movers, Size 4 (22-37 lbs), 150 ct. Works out to $0.367 per diaper.",
+            "brand": {
+              "@type": "Brand",
+              "name": "Huggies"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "54.99",
+              "priceCurrency": "USD",
+              "url": "https://amzn.to/4vXKAPG",
+              "availability": "https://schema.org/InStock"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Product",
+            "name": "Pampers Cruisers 360, Size 4",
+            "description": "Pampers Cruisers 360, Size 4, 144 ct. Works out to $0.346 per diaper.",
+            "brand": {
+              "@type": "Brand",
+              "name": "Pampers"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "49.77",
+              "priceCurrency": "USD",
+              "url": "https://amzn.to/4vU2Fhk",
+              "availability": "https://schema.org/InStock"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Product",
+            "name": "Pampers Swaddlers, Size 4 (150 ct)",
+            "description": "Pampers Swaddlers, Size 4 (150 ct), 150 ct. Works out to $0.332 per diaper.",
+            "brand": {
+              "@type": "Brand",
+              "name": "Pampers"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "49.77",
+              "priceCurrency": "USD",
+              "url": "https://amzn.to/4eUj8ML",
+              "availability": "https://schema.org/InStock"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "Product",
+            "name": "Mama Bear Gentle Touch Diapers, Size 4, Fragrance-Free",
+            "description": "Mama Bear Gentle Touch Diapers, Size 4, Fragrance-Free, 148 ct. Works out to $0.271 per diaper.",
+            "brand": {
+              "@type": "Brand",
+              "name": "Mama Bear"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "40.13",
+              "priceCurrency": "USD",
+              "url": "https://amzn.to/3QTDJrm",
+              "availability": "https://schema.org/InStock"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "Product",
+            "name": "Pampers Amore, Size 4 (15-34 lbs), Our Best Diaper",
+            "description": "Pampers Amore, Size 4 (15-34 lbs), Our Best Diaper, 108 ct. Works out to $0.398 per diaper.",
+            "brand": {
+              "@type": "Brand",
+              "name": "Pampers"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "42.97",
+              "priceCurrency": "USD",
+              "url": "https://amzn.to/4pvYAhe",
+              "availability": "https://schema.org/InStock"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "item": {
+            "@type": "Product",
+            "name": "Pampers Swaddlers, Size 4 (120 ct)",
+            "description": "Pampers Swaddlers, Size 4 (120 ct), 120 ct. Works out to $0.375 per diaper.",
+            "brand": {
+              "@type": "Brand",
+              "name": "Pampers"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "44.97",
+              "priceCurrency": "USD",
+              "url": "https://amzn.to/4gZ8827",
+              "availability": "https://schema.org/InStock"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "item": {
+            "@type": "Product",
+            "name": "Kabrita Goat Milk-Based Infant Formula Powder, 0-12 Months",
+            "description": "Kabrita Goat Milk-Based Infant Formula Powder, 0-12 Months, 28 oz. Works out to $1.643 per oz.",
+            "brand": {
+              "@type": "Brand",
+              "name": "Kabrita"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "45.99",
+              "priceCurrency": "USD",
+              "url": "https://amzn.to/4eZDLHh",
+              "availability": "https://schema.org/InStock"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "item": {
+            "@type": "Product",
+            "name": "Kabrita Goat Milk-Based Toddler Nutrition Drink, 12-24 Months",
+            "description": "Kabrita Goat Milk-Based Toddler Nutrition Drink, 12-24 Months, 28 oz. Works out to $1.535 per oz.",
+            "brand": {
+              "@type": "Brand",
+              "name": "Kabrita"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "42.99",
+              "priceCurrency": "USD",
+              "url": "https://amzn.to/4wFnTQ2",
+              "availability": "https://schema.org/InStock"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "item": {
+            "@type": "Product",
+            "name": "Similac 360 Total Care Infant Formula, Powder, 20.6 oz Tub",
+            "description": "Similac 360 Total Care Infant Formula, Powder, 20.6 oz Tub, 20.6 oz. Works out to $1.698 per oz.",
+            "brand": {
+              "@type": "Brand",
+              "name": "Similac"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "34.98",
+              "priceCurrency": "USD",
+              "url": "https://amzn.to/4wGw8vg",
+              "availability": "https://schema.org/InStock"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "item": {
+            "@type": "Product",
+            "name": "Bubs Whole Goat Milk Formula with Iron, 0-12 Months",
+            "description": "Bubs Whole Goat Milk Formula with Iron, 0-12 Months, 20 oz. Works out to $1.248 per oz.",
+            "brand": {
+              "@type": "Brand",
+              "name": "Bubs"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "24.97",
+              "priceCurrency": "USD",
+              "url": "https://amzn.to/4yrg0j4",
+              "availability": "https://schema.org/InStock"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "item": {
+            "@type": "Product",
+            "name": "Similac 360 Total Care Infant Formula, Powder, Pack of 3 (108 oz total)",
+            "description": "Similac 360 Total Care Infant Formula, Powder, Pack of 3 (108 oz total), 3 x 36 oz (108 oz total). Works out to $1.582 per oz.",
+            "brand": {
+              "@type": "Brand",
+              "name": "Similac"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "170.84",
+              "priceCurrency": "USD",
+              "url": "https://amzn.to/450hkvA",
+              "availability": "https://schema.org/InStock"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "item": {
+            "@type": "Product",
+            "name": "Similac Advance Infant Formula With Iron, 30.8-oz Value Can",
+            "description": "Similac Advance Infant Formula With Iron, 30.8-oz Value Can, 30.8 oz. Works out to $1.395 per oz.",
+            "brand": {
+              "@type": "Brand",
+              "name": "Similac"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "42.97",
+              "priceCurrency": "USD",
+              "url": "https://amzn.to/4fGtu2U",
+              "availability": "https://schema.org/InStock"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "item": {
+            "@type": "Product",
+            "name": "The Honest Co. Comfort Dry Diapers, Size 4 (22-37 lbs), Wild Thang + All The Alpacas",
+            "description": "The Honest Co. Comfort Dry Diapers, Size 4 (22-37 lbs), Wild Thang + All The Alpacas, 104 ct. Works out to $0.476 per diaper.",
+            "brand": {
+              "@type": "Brand",
+              "name": "The Honest Co."
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "49.49",
+              "priceCurrency": "USD",
+              "url": "https://amzn.to/4vF9NNE",
+              "availability": "https://schema.org/InStock"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "item": {
+            "@type": "Product",
+            "name": "Huggies Overnites Overnight Diapers, Size 4 (22-37 lbs)",
+            "description": "Huggies Overnites Overnight Diapers, Size 4 (22-37 lbs), 116 ct. Works out to $0.435 per diaper.",
+            "brand": {
+              "@type": "Brand",
+              "name": "Huggies"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "50.45",
+              "priceCurrency": "USD",
+              "url": "https://amzn.to/4fJG9Ce",
+              "availability": "https://schema.org/InStock"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "item": {
+            "@type": "Product",
+            "name": "Huggies Snug & Dry Diapers, Size 4 (22-37 lbs)",
+            "description": "Huggies Snug & Dry Diapers, Size 4 (22-37 lbs), 92 ct. Works out to $0.272 per diaper.",
+            "brand": {
+              "@type": "Brand",
+              "name": "Huggies"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "24.99",
+              "priceCurrency": "USD",
+              "url": "https://amzn.to/4b3oF19",
+              "availability": "https://schema.org/InStock"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "item": {
+            "@type": "Product",
+            "name": "Hello Bello Diapers, Size 4 (22-37 lbs), Flower Child, 84 Count Value Pack",
+            "description": "Hello Bello Diapers, Size 4 (22-37 lbs), Flower Child, 84 Count Value Pack, 84 ct. Works out to $0.452 per diaper.",
+            "brand": {
+              "@type": "Brand",
+              "name": "Hello Bello"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "37.99",
+              "priceCurrency": "USD",
+              "url": "https://amzn.to/4wUfgkX",
+              "availability": "https://schema.org/InStock"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "item": {
+            "@type": "Product",
+            "name": "Pura Baby Diapers, Size 4 (22-32 lbs), Organic Cotton, Blowout Blocker",
+            "description": "Pura Baby Diapers, Size 4 (22-32 lbs), Organic Cotton, Blowout Blocker, 108 ct. Works out to $0.516 per diaper.",
+            "brand": {
+              "@type": "Brand",
+              "name": "Pura"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "55.75",
+              "priceCurrency": "USD",
+              "url": "https://amzn.to/4hoUPYI",
+              "availability": "https://schema.org/InStock"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "item": {
+            "@type": "Product",
+            "name": "Pampers Baby Dry Diapers, Size 4, 92 Count",
+            "description": "Pampers Baby Dry Diapers, Size 4, 92 Count, 92 ct. Works out to $0.304 per diaper.",
+            "brand": {
+              "@type": "Brand",
+              "name": "Pampers"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "27.97",
+              "priceCurrency": "USD",
+              "url": "https://amzn.to/3R919cl",
+              "availability": "https://schema.org/InStock"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "item": {
+            "@type": "Product",
+            "name": "Earth & Eden Sensitive Baby Diapers, Size 4, Eco-Conscious",
+            "description": "Earth & Eden Sensitive Baby Diapers, Size 4, Eco-Conscious, 192 ct. Works out to $0.312 per diaper.",
+            "brand": {
+              "@type": "Brand",
+              "name": "Earth & Eden"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "59.99",
+              "priceCurrency": "USD",
+              "url": "https://amzn.to/4bSMV6e",
+              "availability": "https://schema.org/InStock"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "item": {
+            "@type": "Product",
+            "name": "The Honest Co. Comfort Dry Overnight Diapers, Size 4, Cozy Cloud + Star Signs",
+            "description": "The Honest Co. Comfort Dry Overnight Diapers, Size 4, Cozy Cloud + Star Signs, 48 ct. Works out to $0.510 per diaper.",
+            "brand": {
+              "@type": "Brand",
+              "name": "The Honest Co."
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "24.49",
+              "priceCurrency": "USD",
+              "url": "https://amzn.to/4purezj",
+              "availability": "https://schema.org/InStock"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "item": {
+            "@type": "Product",
+            "name": "Similac 360 Total Care Sensitive Infant Formula, Powder, Pack of 3 (104.7 oz total)",
+            "description": "Similac 360 Total Care Sensitive Infant Formula, Powder, Pack of 3 (104.7 oz total), 3 x 34.9 oz (104.7 oz total). Works out to $1.820 per oz.",
+            "brand": {
+              "@type": "Brand",
+              "name": "Similac"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "190.57",
+              "priceCurrency": "USD",
+              "url": "https://amzn.to/4ftTu0o",
+              "availability": "https://schema.org/InStock"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "item": {
+            "@type": "Product",
+            "name": "Similac Irish Farms Easy-to-Digest Baby Formula, 0-12 Months",
+            "description": "Similac Irish Farms Easy-to-Digest Baby Formula, 0-12 Months, 24.7 oz. Works out to $1.092 per oz.",
+            "brand": {
+              "@type": "Brand",
+              "name": "Similac"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "26.97",
+              "priceCurrency": "USD",
+              "url": "https://amzn.to/4wQakgJ",
+              "availability": "https://schema.org/InStock"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "item": {
+            "@type": "Product",
+            "name": "Nutricia Neocate Neocate Junior \u2014 Specialized Amino Acid-Based Medical Formula for Food Allergy, Ages 1-10 (NOT standard infant formula)",
+            "description": "Nutricia Neocate Neocate Junior \u2014 Specialized Amino Acid-Based Medical Formula for Food Allergy, Ages 1-10 (NOT standard infant formula), 14.1 oz. Works out to $3.963 per oz.",
+            "brand": {
+              "@type": "Brand",
+              "name": "Nutricia Neocate"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "55.88",
+              "priceCurrency": "USD",
+              "url": "https://amzn.to/45kLDNG",
+              "availability": "https://schema.org/InStock"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "item": {
+            "@type": "Product",
+            "name": "Haven A2 Cow Toddler Formula, Whole Milk, Grass Fed, 12+ Months",
+            "description": "Haven A2 Cow Toddler Formula, Whole Milk, Grass Fed, 12+ Months, 14.1 oz. Works out to $1.595 per oz.",
+            "brand": {
+              "@type": "Brand",
+              "name": "Haven"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "22.49",
+              "priceCurrency": "USD",
+              "url": "https://amzn.to/4pAMBPx",
+              "availability": "https://schema.org/InStock"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "item": {
+            "@type": "Product",
+            "name": "Haven Oat Toddler Formula, Dairy Free, Plant-Based, 12+ Months",
+            "description": "Haven Oat Toddler Formula, Dairy Free, Plant-Based, 12+ Months, 14.1 oz. Works out to $1.843 per oz.",
+            "brand": {
+              "@type": "Brand",
+              "name": "Haven"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "25.99",
+              "priceCurrency": "USD",
+              "url": "https://amzn.to/4ffOaP9",
+              "availability": "https://schema.org/InStock"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 26,
+          "item": {
+            "@type": "Product",
+            "name": "Nutricia Pepticate Hypoallergenic Infant Formula for Cow Milk Allergy Relief, 0-12 Months (NOT standard infant formula)",
+            "description": "Nutricia Pepticate Hypoallergenic Infant Formula for Cow Milk Allergy Relief, 0-12 Months (NOT standard infant formula), 4 x 13.2 oz (52.8 oz total). Works out to $2.991 per oz.",
+            "brand": {
+              "@type": "Brand",
+              "name": "Nutricia Pepticate"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "157.92",
+              "priceCurrency": "USD",
+              "url": "https://amzn.to/3T4BFxp",
+              "availability": "https://schema.org/InStock"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 27,
+          "item": {
+            "@type": "Product",
+            "name": "Nutricia Neocate Neocate Infant Hypoallergenic Formula, Amino Acid-Based, 0-12 Months, 4-Pack (NOT standard infant formula)",
+            "description": "Nutricia Neocate Neocate Infant Hypoallergenic Formula, Amino Acid-Based, 0-12 Months, 4-Pack (NOT standard infant formula), 4 x 14.1 oz (56.4 oz total). Works out to $3.509 per oz.",
+            "brand": {
+              "@type": "Brand",
+              "name": "Nutricia Neocate"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "197.92",
+              "priceCurrency": "USD",
+              "url": "https://amzn.to/45dWqJB",
+              "availability": "https://schema.org/InStock"
+            }
+          }
+        }
       ]
     }
   ]
