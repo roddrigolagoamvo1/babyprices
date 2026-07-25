@@ -417,5 +417,14 @@
     "unitLabel": "diaper",
     "affiliateLink": "https://amzn.to/4vKjCKq",
     "diaperSize": "3"
-  }
+  },
+  { "id":37, "category":"formula", "brand":"Designed by Nature", "name":"Low Heat Cow Milk Formula, 12+ Months, Made in USA", "size":"12 oz", "count":12, "totalPrice":19.95, "unitLabel":"oz", "affiliateLink":"https://amzn.to/4fxYMaW" },
+  { "id":38, "category":"formula", "brand":"Happy Baby Organics", "name":"Stage 1 A2 Infant Formula, 0-12 Months, Organic", "size":"22.9 oz", "count":22.9, "totalPrice":35.99, "unitLabel":"oz", "affiliateLink":"https://amzn.to/4bbArXd" },
+  { "id":39, "category":"formula", "brand":"Happy Baby Organics", "name":"Stage 1 Infant Formula (standard, not A2), 0-12 Months, Organic", "size":"22.9 oz", "count":22.9, "totalPrice":36.99, "unitLabel":"oz", "affiliateLink":"https://amzn.to/4yE75uG" },
+  { "id":40, "category":"formula", "brand":"Good Start", "name":"Dr. Brown's Soothe Pro, Baby Formula for Sensitive Tummies & Spit-Up", "size":"30.6 oz", "count":30.6, "totalPrice":38.17, "unitLabel":"oz", "affiliateLink":"https://amzn.to/4pzU5lA" },
+  { "id":41, "category":"formula", "brand":"Bubs", "name":"365 Day Grass Fed Cow Milk-Based Infant Formula (NOT goat milk), 0-12 Months", "size":"20 oz", "count":20, "totalPrice":30.29, "unitLabel":"oz", "affiliateLink":"https://amzn.to/44MGqOB" },
+  { "id":42, "category":"formula", "brand":"Similac", "name":"Pure Bliss Irish Farms Easy-to-Digest Infant Formula, 0-12 Months", "size":"24.7 oz", "count":24.7, "totalPrice":32.89, "unitLabel":"oz", "affiliateLink":"https://amzn.to/44LkPWQ" },
+  { "id":43, "category":"formula", "brand":"Good Start", "name":"Dr. Brown's Gentle Pro, Baby Formula for Sensitive Tummies, Easy Digestion", "size":"12.3 oz", "count":12.3, "totalPrice":24.59, "unitLabel":"oz", "affiliateLink":"https://amzn.to/4pzSlsC" },
+  { "id":44, "category":"formula", "brand":"Nutricia Neocate", "name":"Neocate Syneo Infant Hypoallergenic Formula with Probiotics, Amino Acid-Based, 0-12 Months, 4-Pack (NOT standard infant formula)", "size":"4 x 14 oz (56 oz total)", "count":56, "totalPrice":217.99, "unitLabel":"oz", "affiliateLink":"https://amzn.to/4ww6HwE" },
+  { "id":45, "category":"formula", "brand":"Similac", "name":"Alimentum Hypoallergenic Formula for Food Allergies and Colic, Pack of 6 (NOT standard infant formula)", "size":"6 x 12.1 oz (72.6 oz total)", "count":72.6, "totalPrice":225.11, "unitLabel":"oz", "affiliateLink":"https://amzn.to/4fSH9UE" }
 ]
